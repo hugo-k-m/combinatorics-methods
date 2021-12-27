@@ -1,0 +1,13 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "combinatorics-methods:lib"
+
+    - path: "./app/Main.hs"
+      component: "combinatorics-methods:exe:combinatorics-methods-exe"
+
+    - path: "./app/Paths_combinatorics_methods.hs"
+      component: "combinatorics-methods:exe:combinatorics-methods-exe"
+
+    - path: "./test"
+      component: "combinatorics-methods:test:combinatorics-methods-test"
