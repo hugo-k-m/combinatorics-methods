@@ -1,13 +1,13 @@
 cradle:
   stack:
     - path: "./src"
-      component: "combinatorics-methods:lib"
+      component: "combinatorial-calculations:lib"
 
     - path: "./app/Main.hs"
-      component: "combinatorics-methods:exe:combinatorics-methods-exe"
+      component: "combinatorial-calculations:exe:combinatorial-calculations-exe"
 
-    - path: "./app/Paths_combinatorics_methods.hs"
-      component: "combinatorics-methods:exe:combinatorics-methods-exe"
+    - path: "./app/Paths_combinatorial_calculations.hs"
+      component: "combinatorial-calculations:exe:combinatorial-calculations-exe"
 
     - path: "./test"
-      component: "combinatorics-methods:test:combinatorics-methods-test"
+      component: "combinatorial-calculations:test:combinatorial-calculations-test"

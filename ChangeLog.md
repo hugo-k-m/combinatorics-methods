@@ -1,3 +1,3 @@
-# Changelog for combinatorics-methods
+# Changelog for combinatorial-calculations
 
 ## Unreleased changes

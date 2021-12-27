@@ -1,1 +1,1 @@
-# combinatorics-methods
+# combinatorial-calculations
