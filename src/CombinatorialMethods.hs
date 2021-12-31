@@ -1,4 +1,4 @@
-module Combinations
+module CombinatorialMethods
   ( variateRep,
   )
 where
