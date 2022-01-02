@@ -1,5 +1,6 @@
 module ParserOptions
   ( parserOpts,
+    ParserType (..),
   )
 where
 
