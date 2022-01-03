@@ -25,3 +25,14 @@ parserOpts =
           <> metavar "K"
           <> help "Specify the sample size"
       )
+
+opts :: ParserInfo ParserType
+opts =
+  info
+    (parserOpts <**> helper)
+    ( fullDesc
+        <> progDesc
+          "Prints all possible combinations of the elements of\
+          \ SET with sample size K where repetitions allowed."
+        <> header "combine - a combinatorial tool"
+    )
