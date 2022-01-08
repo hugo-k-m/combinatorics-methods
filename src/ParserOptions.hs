@@ -6,7 +6,6 @@ module ParserOptions
   )
 where
 
-import BaseSetFunctions
 import CombinatorialMethods
 import Options.Applicative
 import SharedTypes
