@@ -5,12 +5,9 @@ module ParserOptions
   )
 where
 
+import BaseSetFunctions
 import Options.Applicative
-
-data ParserType = ParserType
-  { baseSet :: [String],
-    sampleSetSize :: Int
-  }
+import SharedTypes
 
 parserOpts :: Parser ParserType
 parserOpts =
