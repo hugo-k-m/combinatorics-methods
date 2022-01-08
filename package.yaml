@@ -24,6 +24,7 @@ dependencies:
 - combinatorial
 - containers
 - optparse-applicative
+- pretty-show
 
 library:
   source-dirs: src
@@ -49,3 +50,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - combinatorial-calculations
+    - QuickCheck

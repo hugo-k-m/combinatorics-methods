@@ -2,12 +2,15 @@ module ParserOptions
   ( parserOpts,
     ParserType (..),
     opts,
+    invokeParser,
   )
 where
 
 import BaseSetFunctions
+import CombinatorialMethods
 import Options.Applicative
 import SharedTypes
+import Text.Show.Pretty
 
 parserOpts :: Parser ParserType
 parserOpts =
@@ -30,3 +33,10 @@ opts =
           \ SET with sample size K where repetitions allowed."
         <> header "combine - a combinatorial tool"
     )
+
+invokeParser :: IO ()
+invokeParser = displayCombinations =<< execParser opts
+  where
+    displayCombinations :: ParserType -> IO ()
+    displayCombinations (ParserType s k) =
+      putStrLn $ ppShow (variateRep k s)
