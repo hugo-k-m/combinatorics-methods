@@ -1,24 +1,21 @@
 module ParserOptions
   ( parserOpts,
     ParserType (..),
+    opts,
   )
 where
 
 import Options.Applicative
 
 data ParserType = ParserType
-  { baseSet :: String,
+  { baseSet :: [String],
     sampleSetSize :: Int
   }
 
 parserOpts :: Parser ParserType
 parserOpts =
   ParserType
-    <$> strOption
-      ( long "base-set"
-          <> metavar "SET"
-          <> help "Base set for the combinatorial methods"
-      )
+    <$> many (argument str (metavar "SET"))
     <*> option
       auto
       ( long "sample-set-size"
