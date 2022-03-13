@@ -1,0 +1,9 @@
+combine - a combinatorial tool
+
+Usage: sample-set-size [SET] --sample-set-size K
+  Prints all possible combinations of the elements of SET with sample size K
+  where repetitions allowed.
+
+Available options:
+  --sample-set-size K      Specify the sample size
+  -h,--help                Show this help text

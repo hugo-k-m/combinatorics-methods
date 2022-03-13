@@ -7,3 +7,4 @@ data ParserType = ParserType
   { baseSet :: [String],
     sampleSetSize :: Int
   }
+  deriving (Show)

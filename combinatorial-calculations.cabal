@@ -60,7 +60,7 @@ test-suite combinatorial-calculations-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      CombineSpec
+      ParserSpec
       Paths_combinatorial_calculations
   hs-source-dirs:
       test

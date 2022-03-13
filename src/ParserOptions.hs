@@ -1,7 +1,4 @@
-module ParserOptions
-  ( invokeParser,
-  )
-where
+module ParserOptions where
 
 import CombinatorialMethods
 import Options.Applicative
