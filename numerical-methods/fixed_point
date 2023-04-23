@@ -1,0 +1,56 @@
+def fixed_point(p0, TOL, N, g):
+    """
+    Implements the fixed point iterative method to find the root of a function g.
+
+    Args:
+    p0 (float): initial approximation
+    TOL (float): tolerance
+    N0 (int): maximum number of iterations
+    g (function): the function whose root is to be found
+
+    Returns:
+    The approximate root p or a message of failure.
+    Number of iterations.
+    """
+    # Initialize variables
+    p = p0
+    i = 1
+
+    # Iterate until either the tolerance or maximum number of iterations is reached
+    while i <= N:
+        # Calculate the new approximation
+        try:
+            p = g(p0)
+        except OverflowError as e:
+            return ("Error: Result is too large to handle.", e, i)
+
+        # Check if the absolute difference between p and p_new is less than the tolerance
+        if abs(p - p0) < TOL:
+            return (f"The approximate root is {p}.", i)
+
+        # Update variables for next iteration
+        p0 = p
+        i += 1
+
+    # If the loop terminates without returning, return a message of failure
+    return f"Method failed to converge after {N} iterations."
+
+
+# Define your function g
+def g(x):
+    return (2 * x + 5) ** (1 / 3)
+
+
+result = fixed_point(0, 1e-6, 100, g)
+
+# Print the result
+if isinstance(result, str):
+    print(result)
+elif len(result) == 2:
+    root, iter = result
+    print(root)
+    print(f"The number of iterations is {iter}.")
+else:
+    errMessage, err, iter = result
+    print(errMessage)
+    print(f"The number of iterations is {iter}.")
